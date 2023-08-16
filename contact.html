@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .container{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            background-color: rgb(174, 174, 174);
+        }
+        div{
+            margin: 0.4rem;
+        }
+        label{
+            font-size: 1.1rem;
+        }
+        @media (max-width: 300px){
+            body{
+                gap: 0.9rem;
+            }
+            label{
+                font-size: 0.9rem;
+            }
+            div{
+                margin: 0.3rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Query Form</h1>
+        <h3>For any queries or complaint please fill the form below</h3>
+        <form action="#">
+            <div class="query" id="query">
+                <label for="que">Type Of Query</label>
+                <div>
+                    <select name="que" id="que">
+                        <option value="select">Select</option>
+                        <option value="site">Site related issues</option>
+                        <option value="food">Complaint about food quality</option>
+                        <option value="appraisal">Appraisal for the food served </option>
+                    </select>
+                </div>
+            </div>
+            <div class="name">
+                <label for="name">Name</label>
+                <div>
+                    <input type="text" id="name" placeholder="Enter your Name">
+                </div>
+            </div>
+            <div class="emailID">
+                <label for="email">Email ID</label>
+                <div>
+                    <input type="email" id="email" placeholder="Enter your Email">
+                </div>
+            </div>
+            <div class="phoneNO">
+                <label for="phone">Phone Number</label>
+                <div>
+                    <input type="tel" id="phone" placeholder="Enter your phone no.">
+                </div>
+            </div>
+            <div class="member">
+                <div style="font-size: 1.1rem;">
+                    Are your a Member of Online FoodShop
+                </div>
+                <input type="radio" name="answer" id="yes">
+                <label for="yes">YES</label>
+                <input type="radio" name="answer" id="no">
+                <label for="no">NO</label>
+            </div>
+            <div class="query_area">
+                <label for="query_info">Elaborate Your Query</label>
+                <div>
+                    <textarea id="query_info" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <div class="contact">
+            <h2>Contact Information</h2>
+            <h3>Phone No. - 9816273908</h3>
+            <h3>Email ID - foodShop@gmail.com</h3>
+        </div>
+    </div>
+</body>
+</html>
