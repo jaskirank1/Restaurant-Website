@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top, .navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top h1{
+    font-size: 3.5rem;
+    color: red;
+}
+.navbar{
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 1rem;
+    background-color: rgb(141, 139, 139);
+}
+.nav{
+    display: flex;   
+    justify-content: space-between;
+}
+.nav li{
+    list-style: none;
+    text-align: center;
+    margin: 10px 23px;
+}
+.nav li a{
+    text-decoration: none;
+    transition: 1s linear;
+}
+.nav li:hover{
+    cursor: pointer;
+    transform: scale(1.4);
+}
+@media (max-width :360px){
+    .nav{
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 882px){
+    .nav li{
+        margin-left: 5rem;
+        font-size: 1.5rem;
+    }
+}
+.startingImg{
+    background: url('https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+    width: 96.5vw;
+    height: 58vh;
+    margin: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.startingImg h1, a{
+    color: white;
+}
+.startingImg h1{
+    font-size: 2rem;
+}
+.startingImg a{
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.start_content{
+    margin: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.start_content h1{
+    text-align: center;
+}
+.two_images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.leftImg , .RightImg{
+    width: 15rem;
+    height: 10rem;
+    border-radius: 3rem;
+    position: relative;
+    transition: 0.2s linear;
+}
+.leftImg{
+    background: url('https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hlZnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60') no-repeat center center/cover;
+}
+.RightImg{
+    background: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60') no-repeat center center/cover;
+}
+.leftImg a:hover, .RightImg a:hover, .start_content a:hover{
+    transform: scale(1.3);
+}
+.leftImg a, .RightImg a{
+    position: absolute;
+    bottom: 10px;
+    left: 39%;
+}
+@media (max-width: 570px){
+    .startingImg{
+        height: 110vh;
+    }
+    .two_images{
+        flex-direction: column;
+    }
+}
+@media (max-width: 450px){
+    .leftImg, .RightImg{
+        width: 17rem;
+        height: 15rem;
+    }
+}
+.feature_products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.feature_products h1{
+    margin: 5px;
+    font-size: 30px;
+    color: red;
+}
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 1s linear;
+}
+@media (max-width: 845px) {
+    .products{
+        flex-wrap: wrap;
+    }
+}
+.image1{
+    background: url('https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGl6emF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60') no-repeat center center/cover;
+}
+.image2{
+    background: url('https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmlyeWFuaXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60') no-repeat center center/cover;
+}
+.image3{
+    background: url('https://images.unsplash.com/photo-1612927601601-6638404737ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bm9vZGxlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60') no-repeat center center/cover;
+}
+.image1, .image2, .image3{
+    width: 17rem;
+    height: 13rem;
+    border-radius: 1rem;
+    position: relative;
+    border: 2px solid white;
+    /* to apply card effect */
+    transition: 1s linear;
+    transform-style: preserve-3d;
+}
+.card1:hover > .image1{
+    cursor: pointer;
+    transform: rotateY(180deg);
+} 
+.card2:hover > .image2{
+    cursor: pointer;
+    transform: rotateY(180deg);
+} 
+.card3:hover > .image3{
+    cursor: pointer;
+    transform: rotateY(180deg);
+} 
+.front{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.back{
+    position: relative;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 17rem;
+    height: 13rem;
+    background-color: rgb(163, 161, 161);
+    border-radius: 1rem;
+    backface-visibility: hidden;
+}
+@media (min-width: 1000px){
+    .image1, .image2, .image3{
+        width: 20.2rem;
+        height: 18rem;
+    }
+    .back{
+        width: 20.2rem;
+        height: 18rem;
+    }
+}
+.back a{
+    text-decoration: none;
+    border: 2px solid black;
+    color: black;
+    border-radius: 1rem;
+    background-color: aliceblue;
+}
+.back p, .back h2{
+    text-align: center;
+}
+.footer{
+    margin-top: 2.6rem;
+    text-align: center;
+}
